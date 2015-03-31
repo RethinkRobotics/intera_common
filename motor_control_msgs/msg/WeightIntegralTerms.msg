@@ -1,2 +1,2 @@
 Header header
-MotorControlMsgs/WeightIntegralTerm[] weights
+motor_control_msgs/WeightIntegralTerm[] weights

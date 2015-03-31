@@ -1,5 +1,5 @@
 <package format="2">
-  <name>MotorControlMsgs</name>
+  <name>motor_control_msgs</name>
   <version>5.0.0</version>
   <description>
   Motor Control and hardware interface messages

@@ -7,7 +7,7 @@ geometry_msgs/PoseStamped pose_stamp
 
 # an (optional) seed to make the arm conform to. a seed with
 # empty .angles/.names subcomponenets will be ignored
-MotorControlMsgs/JointPosition seed
+motor_control_msgs/JointPosition seed
 
 # Whether to use other seeds
-MotorControlMsgs/IKSearchStrategy ik_search_strategy
+motor_control_msgs/IKSearchStrategy ik_search_strategy

@@ -1,7 +1,7 @@
 Header header
 
 # Joint position target (contains names and positions for all joints)
-MotorControlMsgs/JointPosition target
+motor_control_msgs/JointPosition target
 float64[] velocities
 float64[] accelerations
 

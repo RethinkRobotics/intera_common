@@ -1,2 +1,2 @@
 string name
-MotorControlMsgs/TrajectoryParameterizationType type
+motor_control_msgs/TrajectoryParameterizationType type

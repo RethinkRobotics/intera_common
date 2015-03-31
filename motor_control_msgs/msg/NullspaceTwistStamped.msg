@@ -8,4 +8,4 @@ geometry_msgs/TwistStamped     twist_stamped
 #   internal self-motions of a kinematic chain - so this
 #   can be thought of as a preferred pose to bias the arm
 #   toward.
-MotorControlMsgs/JointPosition nullspace_setpoint
+motor_control_msgs/JointPosition nullspace_setpoint

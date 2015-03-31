@@ -1,7 +1,7 @@
 # The reply message for a Rethink request-reply for joint motion planning
 
 # the start configuration of the arm to plan from
-MotorControlMsgs/JointPosition start
+motor_control_msgs/JointPosition start
 
 # the goal configuration of the arm to plan to
-MotorControlMsgs/JointPosition goal
+motor_control_msgs/JointPosition goal

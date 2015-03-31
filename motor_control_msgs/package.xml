@@ -1,0 +1,20 @@
+<package format="2">
+  <name>MotorControlMsgs</name>
+  <version>5.0.0</version>
+  <description>
+  Motor Control and hardware interface messages
+  </description>
+  
+  <maintainer email="dcookson@rethinkrobotics.com">Dan Cookson</maintainer>
+  <license>Rethink</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- package contains messages -->
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  
+</package>

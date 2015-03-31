@@ -1,0 +1,68 @@
+cmake_minimum_required(VERSION 2.8.3)
+
+project(MotorControlMsgs)
+
+find_package(catkin REQUIRED COMPONENTS message_generation std_msgs geometry_msgs sensor_msgs)
+
+add_message_files(DIRECTORY msg
+                  FILES
+                    ApproachAlert.msg
+                    ApproachCtrl.msg
+                    ApproachMapMsg.msg
+                    AccelerometerStates.msg
+                    CollisionDetection.msg
+                    Constraint.msg
+                    DebugJointCommand.msg
+                    DebugJointState.msg
+                    DebugNodeState.msg
+                    DebugServoLoopState.msg
+                    DebugServoLoopStateDetail.msg
+                    DebugVelocityController.msg
+                    GripperConfiguration.msg
+                    IKSearchStrategy.msg
+                    Inertia.msg
+                    InterpolationType.msg
+                    JointCollisionEstimatorDebug.msg
+                    JointMotionCommand.msg
+                    JointPosition.msg
+                    JointTrajectory.msg
+                    JointTrajectoryPoint.msg
+                    LimbState.msg
+                    LimbStates.msg
+                    NamedTrajectoryParameterizationType.msg
+                    NullspaceTwistStamped.msg
+                    ObjectMass.msg
+                    OptionalBool.msg
+                    OptionalFloat.msg
+                    PoseFixed.msg
+                    SeededIKPose.msg
+                    SonarState.msg
+                    SonarStates.msg
+                    SpeedConstraint.msg
+                    SpeedLimit.msg
+                    SpeedLimitScale.msg
+                    SplineProfileParameters.msg
+                    Stiffness.msg
+                    StiffnessConstraint.msg
+                    StringArray.msg
+                    SuckerState.msg
+                    SuckerStates.msg
+                    TrajectoryParameterizationType.msg
+                    TwistConstraint.msg
+                    TwistFixed.msg
+                    TwistLevel.msg
+                    TwistOrient.msg
+                    URDFSegment.msg
+                    Vector3Fixed.msg
+                    VelocityControllerState.msg
+                    WeightIntegralTerm.msg
+                    WeightIntegralTerms.msg
+                    WrenchConstraint.msg
+                    WrenchLevel.msg
+  )
+                  
+                  
+generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs)
+
+catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs)
+

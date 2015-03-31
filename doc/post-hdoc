@@ -1,0 +1,3 @@
+#!/bin/bash
+
+[ -e ../msg/msg_gen ] && rm -rf ../msg/msg_gen

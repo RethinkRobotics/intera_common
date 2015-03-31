@@ -1,0 +1,9 @@
+# This configuration file will be processed by the hdoc tool (internally
+# developed and maintained) to generate documentation for this pod.
+#
+# This file will be treated by hdoc as a Doxygen configuration file, and should
+# consist of a series of options, one on each line.
+# See the Doxygen documentation for valid options.
+
+INPUT=../msg/msg_gen ./
+RECURSIVE=yes

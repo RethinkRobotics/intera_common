@@ -1,0 +1,2 @@
+Header header
+MotorControlMsgs/WeightIntegralTerm[] weights

@@ -1,0 +1,11 @@
+std_msgs/Header header
+float64 impactTorqueScaledSum
+float64[] impactTorque
+float64[] impactTorqueExpected
+float64[] impactTorqueScaled
+float64[] impactScalerInitial
+float64[] impactScalerFinal
+float64[] accCmd
+float64[] squishTorque
+float64 endpointForce
+float64 endpointTorque

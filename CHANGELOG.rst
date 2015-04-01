@@ -32,6 +32,9 @@
 Changelog for package motor_control_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.0.1 (2015-04-01)
 ------------------
 * MotorControlMsgs -> motor_control_msgs

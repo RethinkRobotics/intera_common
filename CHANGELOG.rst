@@ -28,3 +28,15 @@
 - intera_core_msgs package contains all messages required to communicate with an Intera robot
 - intera_tools_description is a package for urdf's & meshes for tools like the rethink electric gripper or controller box
 - intera_common is a metapackage for intera_core_msgs and intera_tools_description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package motor_control_msgs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Forthcoming
+-----------
+* MotorControlMsgs -> motor_control_msgs
+* directory for MotorControlMsgs
+* Contributors: Matthew Williamson
+
+0.0.1 (2014-12-12)
+------------------

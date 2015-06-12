@@ -23,6 +23,7 @@ add_message_files(DIRECTORY msg
                     Inertia.msg
                     InterpolationType.msg
                     JointCollisionEstimatorDebug.msg
+                    JointLimits.msg
                     JointMotionCommand.msg
                     JointPosition.msg
                     JointTrajectory.msg

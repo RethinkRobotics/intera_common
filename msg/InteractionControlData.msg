@@ -9,3 +9,5 @@ bool      interactionControlState
 float64[] K_Impedance
 # Damping units are (Ns/m) and (Nms/rad) for the first and second three values
 float64[] D_Impedance
+# NullSpace stiffness units are in (Nm/rad)
+float64[] K_NullSpace

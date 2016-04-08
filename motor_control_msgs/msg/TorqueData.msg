@@ -6,3 +6,4 @@ Header header
 string[]  name
 float64[] measuredTorques
 float64[] feedforwardTorques
+float64[] torqueRippleFreq

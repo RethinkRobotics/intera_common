@@ -18,6 +18,9 @@ float64[] K_NullSpace
 # Vector of desired forces to be regulated in (N) and (Nm)
 float64[6] forceCommand
 
+## Desired frame
+geometry_msgs/Pose interactionFrame
+
 ## Mode Selection Parameters
 # The possible interaction control modes are:
 uint8 IMPEDANCE_MODE=1

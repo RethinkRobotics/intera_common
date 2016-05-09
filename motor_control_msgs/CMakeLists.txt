@@ -25,6 +25,7 @@ add_message_files(DIRECTORY msg
                     IKSearchStrategy.msg
                     Inertia.msg
                     InteractionControlData.msg
+                    InteractionControlDebug.msg
                     InterpolationType.msg
                     JointCollisionEstimatorDebug.msg
                     JointLimits.msg

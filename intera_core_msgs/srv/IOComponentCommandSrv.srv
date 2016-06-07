@@ -1,0 +1,7 @@
+## IO Component Command service call
+IOComponentCommand command
+---
+time time               # time the request was handled, serves as a sequence number
+string op               # operation performed
+IOStatus status         # status response
+string response         # (OPTIONAL) command-specific response JSON data (e.g. resulting config)

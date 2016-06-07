@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <name>intera_common</name>
+  <version>5.0.0</version>
+  <description>
+    Common metapackage for Intera messages, and end effector URDF's
+    and meshes for the Intera robots from Rethink Robotics.
+  </description>
+
+  <maintainer email="rsdk.support@rethinkrobotics.com">
+    Rethink Robotics Inc.
+  </maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">http://sdk.rethinkrobotics.com</url>
+  <url type="repository">
+    https://github.com/RethinkRobotics/intera_common
+  </url>
+  <url type="bugtracker">
+    https://github.com/RethinkRobotics/intera_common/issues
+  </url>
+  <author>Rethink Robotics Inc.</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>intera_core_msgs</run_depend>
+  <run_depend>intera_tools_description</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+
+</package>

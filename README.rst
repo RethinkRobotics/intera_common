@@ -15,7 +15,7 @@ Code & Tickets
 | Contributions   | http://sdk.rethinkrobotics.com/wiki/Contributions              |
 +-----------------+----------------------------------------------------------------+
 
-baxter_common Repository Overview
+intera_common Repository Overview
 ---------------------------------
 
 ::

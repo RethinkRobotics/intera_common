@@ -22,9 +22,9 @@ intera_common Repository Overview
 
      .
      |
-     +-- intera_common/           intera_common metapackage
+     +-- intera_common/             intera_common metapackage
      |
-     +-- intera_core_msgs/        messages and services for communication with Intera robots
+     +-- intera_core_msgs/          messages and services for communication with Intera robots
      |   +-- msgs/
      |   +-- srvs/
      |

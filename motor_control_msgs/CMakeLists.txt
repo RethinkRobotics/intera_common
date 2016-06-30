@@ -16,6 +16,7 @@ add_message_files(DIRECTORY msg
                     ArmStateEstimate.msg
                     CollisionDetection.msg
                     Constraint.msg
+                    ControllerType.msg
                     DebugJointCommand.msg
                     DebugJointState.msg
                     DebugNodeState.msg

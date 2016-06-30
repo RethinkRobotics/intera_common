@@ -6,9 +6,9 @@ bool      interactionControlState
 
 ## Impedance Control Parameters
 # Stiffness units are (N/m) and (Nm/rad) for the first and second three values
-float64[6] K_Impedance
+float64[] K_Impedance
 # Damping units are (Ns/m) and (Nms/rad) for the first and second three values
-float64[6] D_Impedance
+float64[] D_Impedance
 # NullSpace stiffness units are in (Nm/rad)
 float64[] K_NullSpace
 
@@ -17,7 +17,7 @@ float64[] K_NullSpace
 # to be regulated in (N) and (Nm)
 # If in impedance with force limit mode, this vector specifies the
 # magnitude of forces/torques (N and Nm) that the command will not exceed.
-float64[6] forceCommand
+float64[] forceCommand
 
 ## Desired frame
 geometry_msgs/Pose interactionFrame
@@ -33,7 +33,7 @@ uint8 FORCE_MODE=2
 uint8 IMPEDANCE_WITH_FORCE_LIMIT_MODE=3
 
 # Six dimensional vector that specifies the interaction control mode for each dimenstion.
-uint8[6] interactionControlMode
+uint8[] interactionControlMode
 
 # All 6 values in force and impedance parameter vectors have to be filled, independent of
 # what mode is chosen for that dimension. In the case that a control mode is not used in

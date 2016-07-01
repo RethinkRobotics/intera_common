@@ -5,6 +5,7 @@ float64[] impactTorqueExpected
 float64[] impactTorqueScaled
 float64[] impactScalerInitial
 float64[] impactScalerFinal
+float64[] impactTorqueScaledExpected
 float64[] accCmd
 float64[] squishTorque
 float64 impactTorqueScaledSumExpected

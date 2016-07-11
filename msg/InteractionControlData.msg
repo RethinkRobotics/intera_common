@@ -21,6 +21,8 @@ float64[] forceCommand
 
 ## Desired frame
 geometry_msgs/Pose interactionFrame
+string tipName
+bool inEndEffectorFrame
 
 ## Mode Selection Parameters
 # The possible interaction control modes are:

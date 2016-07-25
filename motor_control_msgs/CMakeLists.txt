@@ -28,6 +28,7 @@ add_message_files(DIRECTORY msg
                     Inertia.msg
                     InteractionControlData.msg
                     InteractionControlDebug.msg
+                    InteractionControlOutput.msg
                     InterpolationType.msg
                     JointCollisionEstimatorDebug.msg
                     JointLimits.msg

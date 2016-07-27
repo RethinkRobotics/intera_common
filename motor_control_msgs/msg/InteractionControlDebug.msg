@@ -20,3 +20,4 @@ float64[]         torquesImpedance
 float64[]         torquesNullSpaceDesired
 float64[]         torquesNullSpaceProjected
 float64[]         quatError
+float64[]         torquesCollisionAvoidance

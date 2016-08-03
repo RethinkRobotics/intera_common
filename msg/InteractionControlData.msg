@@ -33,6 +33,9 @@ uint8 FORCE_MODE=2
 # Impedance with force limit, does impedance control while ensuring the commanded
 # forces/torques do not exceed the ones specified by absolute value of forceCommand.
 uint8 IMPEDANCE_WITH_FORCE_LIMIT_MODE=3
+# Force with motion bounds, does force control while ensuring the current
+# pose/velocities do not exceed the ones specified by absolute values of forceMotionThreshold
+uint8 FORCE_WITH_MOTION_LIMIT_MODE=4
 
 # Six dimensional vector that specifies the interaction control mode for each dimenstion.
 uint8[] interactionControlMode

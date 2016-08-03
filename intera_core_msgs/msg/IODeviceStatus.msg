@@ -4,5 +4,5 @@ IOComponentStatus device   # device status data
 IODataStatus[]    ports    # Ports status
 IODataStatus[]    signals  # Signals status
 time[]            commands # recent command timestamps, for syncing
-
+string[]          responses # recent command responses
 

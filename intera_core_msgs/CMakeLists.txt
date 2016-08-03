@@ -22,7 +22,6 @@ add_message_files( DIRECTORY msg
         CameraControl.msg
         AnalogOutputCommand.msg
         EndpointState.msg
-        RobustControllerStatus.msg
         DigitalIOStates.msg
         HeadPanCommand.msg
         AnalogIOState.msg

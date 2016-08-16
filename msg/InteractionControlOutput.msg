@@ -16,3 +16,6 @@ float64[] D_Impedance
 # Vector of forces (wrench) (N and Nm) that is commanded by the interaction controller
 # for the active endpoint.
 float64[] activeEndpointForceCommand
+
+string tipName
+bool inEndEffectorFrame

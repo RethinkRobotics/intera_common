@@ -50,12 +50,13 @@ add_message_files( DIRECTORY msg
         URDFConfiguration.msg
 )
 
-add_service_files( DIRECTORY srv 
+add_service_files( DIRECTORY srv
         FILES
         CloseCamera.srv
         ListCameras.srv
         OpenCamera.srv
         SolvePositionIK.srv
+        SolvePositionFK.srv
         IOComponentCommandSrv.srv
 )
 

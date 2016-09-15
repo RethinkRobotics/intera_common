@@ -1,0 +1,11 @@
+# Joint positions(s) to request Forward-Kinematics joint solutions for
+sensor_msgs/JointState[] configuration
+
+# Tip name for each pose FK
+string[] tip_names
+
+---
+
+# Solution(s) per FK call
+geometry_msgs/PoseStamped[] pose_stamp
+bool[] isValid

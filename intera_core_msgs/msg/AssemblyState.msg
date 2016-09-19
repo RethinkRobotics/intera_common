@@ -2,6 +2,7 @@ bool ready               # true if enabled and ready to operate, e.g., not homin
 bool enabled             # true if enabled
 bool stopped             # true if stopped -- e-stop asserted
 bool error               # true if a component of the assembly has an error
+bool lowVoltage          # true when the robot is in low voltage mode
 #
 # The following are specific to the robot top-level assembly:
 uint8  estop_button      # One of the following:

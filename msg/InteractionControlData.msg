@@ -7,6 +7,8 @@ bool      interactionControlState
 ## Impedance Control Parameters
 # Stiffness units are (N/m) and (Nm/rad) for the first and second three values
 float64[] K_Impedance
+# Force certain directions to have maximum possible impedance
+bool[] Max_Impedance
 # Damping units are (Ns/m) and (Nms/rad) for the first and second three values
 float64[] D_Impedance
 # NullSpace stiffness units are in (Nm/rad)

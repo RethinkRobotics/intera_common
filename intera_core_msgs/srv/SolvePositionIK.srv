@@ -10,30 +10,34 @@ sensor_msgs/JointState[] seed_angles
 # * default (SEED_AUTO) mode: iterate through seed types until first valid
 #                             solution is found
 # * setting any other mode:   try only that seed type
-uint8 SEED_AUTO    = 0
-uint8 SEED_USER    = 1
-uint8 SEED_CURRENT = 2
-uint8 SEED_NS_MAP  = 3
+int8 SEED_AUTO    = 0
+int8 SEED_USER    = 1
+int8 SEED_CURRENT = 2
+int8 SEED_NS_MAP  = 3
 
-uint8 seed_mode
+int8 seed_mode
 
 # For each IK request, tells whether it should use the nullspace goal
 bool[] use_nullspace_goal
 
-# NOTE: right now the nullspace goal must contain all available joints, but in the
-#       future, we will support specifying only a subset of joints
+# The nullspace goal can either be the full set or subset of joint angles
 sensor_msgs/JointState[] nullspace_goal
+
+# The gain used to bias toward the nullspace goal. Must be [0.0, 1.0]
+# If empty, the default gain of 0.4 will be used
+float64[] nullspace_gain
 
 # Tip name for each pose IK
 string[] tip_names
+
 ---
+
 # joints[i]      == joint angle solution for each pose_state[i]
 sensor_msgs/JointState[] joints
 
-# NOTE: isValid will be deprecated by result_type in future versions
-bool[] isValid
-
 # result_type[i] == seed type used to find valid solution, joints[i];
-# otherwise,     == RESULT_INVALID (no valid solution found).
-uint8 RESULT_INVALID = 0
-uint8[] result_type
+# otherwise,     == IK_FAILED (no valid IK solution found)
+# or             == IK_IN_COLLISION (if IK solution is in self collision)
+int8 IK_FAILED = -1
+int8 IK_IN_COLLISION = -2
+int8[] result_type

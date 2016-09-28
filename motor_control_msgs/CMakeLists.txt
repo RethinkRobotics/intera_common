@@ -16,6 +16,7 @@ add_message_files(DIRECTORY msg
                     ArmStateEstimate.msg
                     CollisionDetection.msg
                     Constraint.msg
+                    ControllerType.msg
                     DebugJointCommand.msg
                     DebugJointState.msg
                     DebugNodeState.msg
@@ -28,6 +29,7 @@ add_message_files(DIRECTORY msg
                     InteractionControlData.msg
                     InteractionControlDebug.msg
                     InteractionControlOutput.msg
+                    InterpolationType.msg
                     JointCollisionEstimatorDebug.msg
                     JointLimits.msg
                     JointMotionCommand.msg

@@ -29,7 +29,6 @@ add_message_files(DIRECTORY msg
                     InteractionControlDebug.msg
                     InteractionControlOutput.msg
                     JointCollisionEstimatorDebug.msg
-                    JointLimits.msg
                     JointMotionCommand.msg
                     JointPosition.msg
                     JointTrajectory.msg
@@ -68,9 +67,8 @@ add_message_files(DIRECTORY msg
                     WrenchConstraint.msg
                     WrenchLevel.msg
   )
-                  
-                  
+
+
 generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs)
 
 catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs)
-

@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(intera_core_msgs)
 
-find_package(catkin REQUIRED COMPONENTS 
+find_package(catkin REQUIRED COMPONENTS
         message_generation
         std_msgs
         geometry_msgs
         sensor_msgs
 )
 
-add_message_files( DIRECTORY msg 
+add_message_files( DIRECTORY msg
         FILES
         NavigatorStates.msg
         SEAJointState.msg
@@ -32,6 +32,7 @@ add_message_files( DIRECTORY msg
         NavigatorState.msg
         EndEffectorState.msg
         JointCommand.msg
+        JointLimits.msg
         NavigatorState.msg
         EndpointStates.msg
         DigitalIOState.msg

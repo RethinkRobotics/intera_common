@@ -1,5 +1,5 @@
 # names of the joints
-string[] jointNames
+string[] joint_names
 
 # lower bound on the angular position in radians
 float64[] position_lower
@@ -14,4 +14,4 @@ float64[] velocity
 float64[] accel
 
 # symmetric maximum joint torque in Newton-meters
-float64[] torque
+float64[] effort

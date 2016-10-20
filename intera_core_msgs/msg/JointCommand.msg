@@ -6,10 +6,10 @@ string[]  names        # Joint names order for command
 
 # Fields of commands indexed according to the Joint names vector.
 # Command fields required for a desired mode are listed in the comments
-float64[] position     # (radians)   Required for POSITION_MODE and TRAJECTORY_MODE
-float64[] velocity     # (rad/sec)   Required for VELOCITY_MODE and TRAJECTORY_MODE
-float64[] acceleration # (rad/sec^2) Required for                   TRAJECTORY_MODE
-float64[] effort       # (newtons)   Required for TORQUE_MODE
+float64[] position     # (radians)       Required for POSITION_MODE and TRAJECTORY_MODE
+float64[] velocity     # (radians/sec)   Required for VELOCITY_MODE and TRAJECTORY_MODE
+float64[] acceleration # (radians/sec^2) Required for                   TRAJECTORY_MODE
+float64[] effort       # (newton-meters) Required for TORQUE_MODE
 
 # Modes available to command arm
 int32 POSITION_MODE=1

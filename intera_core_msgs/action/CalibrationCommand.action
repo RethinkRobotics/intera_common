@@ -1,0 +1,24 @@
+# Engine command goal
+string command
+string CALIBRATION_START=start
+string CALIBRATION_STOP=stop
+
+---
+# result
+bool result
+string statusId
+# possible values for statusId are:
+string SUCCESS=Success
+string STOPPED=Stopped
+string GENERIC_FAILURE=calibrationFailure
+string INCOMPLETE=incomplete
+string GRIPPER_ON=cannotCalibrateWithGripper
+string TORQUES_EXCEEDED_THRESHOLD=torquesExceededThreshold
+string PLANNER_FAILURE=plannerFailure
+
+
+---
+# feedback
+string currentState
+uint32 numberOfPoses
+uint32 currentPoseNumber

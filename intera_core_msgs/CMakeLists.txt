@@ -4,6 +4,7 @@ project(intera_core_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
         message_generation
+        actionlib_msgs
         std_msgs
         geometry_msgs
         sensor_msgs
@@ -61,11 +62,12 @@ add_service_files( DIRECTORY srv
         IOComponentCommandSrv.srv
 )
 
+add_action_files(DIRECTORY action FILES CalibrationCommand.action)
 
 ## Build
-generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs actionlib_msgs)
 
-catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs)
+catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs actionlib_msgs)
 
 
 ## Install

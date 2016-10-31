@@ -14,13 +14,10 @@ add_message_files( DIRECTORY msg
         FILES
         NavigatorStates.msg
         SEAJointState.msg
-        EndEffectorProperties.msg
         CollisionAvoidanceState.msg
         NavigatorStates.msg
         HeadState.msg
         AnalogIOStates.msg
-        EndEffectorCommand.msg
-        CameraControl.msg
         AnalogOutputCommand.msg
         EndpointState.msg
         DigitalIOStates.msg
@@ -28,10 +25,8 @@ add_message_files( DIRECTORY msg
         AnalogIOState.msg
         DigitalOutputCommand.msg
         AssemblyStates.msg
-        CameraSettings.msg
         AssemblyState.msg
         NavigatorState.msg
-        EndEffectorState.msg
         JointCommand.msg
         JointLimits.msg
         NavigatorState.msg
@@ -54,9 +49,6 @@ add_message_files( DIRECTORY msg
 
 add_service_files( DIRECTORY srv
         FILES
-        CloseCamera.srv
-        ListCameras.srv
-        OpenCamera.srv
         SolvePositionIK.srv
         SolvePositionFK.srv
         IOComponentCommandSrv.srv

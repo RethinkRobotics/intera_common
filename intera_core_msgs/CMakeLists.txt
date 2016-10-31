@@ -35,15 +35,6 @@ add_message_files( DIRECTORY msg
         CollisionDetectionState.msg
         HomingCommand.msg
         HomingState.msg
-        IOComponentCommand.msg
-        IOComponentConfiguration.msg
-        IOComponentStatus.msg
-        IODataStatus.msg
-        IODeviceConfiguration.msg
-        IODeviceStatus.msg
-        IONodeConfiguration.msg
-        IOStatus.msg
-        IONodeStatus.msg
         URDFConfiguration.msg
 )
 
@@ -51,7 +42,6 @@ add_service_files( DIRECTORY srv
         FILES
         SolvePositionIK.srv
         SolvePositionFK.srv
-        IOComponentCommandSrv.srv
 )
 
 add_action_files(DIRECTORY action FILES CalibrationCommand.action)

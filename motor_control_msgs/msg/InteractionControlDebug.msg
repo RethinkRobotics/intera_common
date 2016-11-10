@@ -1,6 +1,6 @@
 Header header
 
-bool      interactionControlState
+bool      interactionControlActive
 uint8[]   interactionControlMode
 
 ## Impedance Control Parameters

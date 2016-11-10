@@ -25,9 +25,7 @@ add_message_files(DIRECTORY msg
                     GripperConfiguration.msg
                     IKSearchStrategy.msg
                     Inertia.msg
-                    InteractionControlData.msg
                     InteractionControlDebug.msg
-                    InteractionControlOutput.msg
                     JointCollisionEstimatorDebug.msg
                     JointMotionCommand.msg
                     JointPosition.msg

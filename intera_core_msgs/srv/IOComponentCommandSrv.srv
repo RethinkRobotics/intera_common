@@ -1,5 +1,6 @@
 ## IO Component Command service call
 IOComponentCommand command
+float32 timeout  # max seconds to handle the request, default used if 0.0
 ---
 time time               # time the request was handled, serves as a sequence number
 string op               # operation performed

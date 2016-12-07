@@ -2,37 +2,33 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(intera_core_msgs)
 
-find_package(catkin REQUIRED COMPONENTS 
+find_package(catkin REQUIRED COMPONENTS
         message_generation
+        actionlib_msgs
         std_msgs
         geometry_msgs
         sensor_msgs
 )
 
-add_message_files( DIRECTORY msg 
+add_message_files( DIRECTORY msg
         FILES
         NavigatorStates.msg
         SEAJointState.msg
-        EndEffectorProperties.msg
         CollisionAvoidanceState.msg
         NavigatorStates.msg
         HeadState.msg
         AnalogIOStates.msg
-        EndEffectorCommand.msg
-        CameraControl.msg
         AnalogOutputCommand.msg
         EndpointState.msg
-        RobustControllerStatus.msg
         DigitalIOStates.msg
         HeadPanCommand.msg
         AnalogIOState.msg
         DigitalOutputCommand.msg
         AssemblyStates.msg
-        CameraSettings.msg
         AssemblyState.msg
         NavigatorState.msg
-        EndEffectorState.msg
         JointCommand.msg
+        JointLimits.msg
         NavigatorState.msg
         EndpointStates.msg
         DigitalIOState.msg
@@ -51,20 +47,19 @@ add_message_files( DIRECTORY msg
         URDFConfiguration.msg
 )
 
-add_service_files( DIRECTORY srv 
+add_service_files( DIRECTORY srv
         FILES
-        CloseCamera.srv
-        ListCameras.srv
-        OpenCamera.srv
         SolvePositionIK.srv
+        SolvePositionFK.srv
         IOComponentCommandSrv.srv
 )
 
+add_action_files(DIRECTORY action FILES CalibrationCommand.action)
 
 ## Build
-generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs actionlib_msgs)
 
-catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs)
+catkin_package(CATKIN_DEPENDS message_runtime std_msgs geometry_msgs sensor_msgs actionlib_msgs)
 
 
 ## Install

@@ -39,6 +39,7 @@ add_message_files(DIRECTORY msg
                     OptionalBool.msg
                     OptionalFloat.msg
                     PoseFixed.msg
+                    PoseMetrics.msg
                     SeededIKPose.msg
                     SonarState.msg
                     SonarStates.msg

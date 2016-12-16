@@ -38,6 +38,8 @@ sensor_msgs/JointState[] joints
 # result_type[i] == seed type used to find valid solution, joints[i];
 # otherwise,     == IK_FAILED (no valid IK solution found)
 # or             == IK_IN_COLLISION (if IK solution is in self collision)
+# or             == IK_ENDPOINT_DOES_NOT_EXIST
 int8 IK_FAILED = -1
 int8 IK_IN_COLLISION = -2
+int8 IK_ENDPOINT_DOES_NOT_EXIST = -3
 int8[] result_type

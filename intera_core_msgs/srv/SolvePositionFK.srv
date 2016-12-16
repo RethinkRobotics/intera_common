@@ -9,3 +9,4 @@ string[] tip_names
 # Solution(s) per FK call
 geometry_msgs/PoseStamped[] pose_stamp
 bool[] isValid
+bool[] inCollision

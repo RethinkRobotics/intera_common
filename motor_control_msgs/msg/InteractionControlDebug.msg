@@ -26,3 +26,5 @@ float64[]         torquesNullSpaceProjected
 float64[]         quatError
 float64[]         torquesCollisionAvoidance
 float64[]         endptVelocityActualFiltered
+float64[]         jointPosition
+float64           QPoutput

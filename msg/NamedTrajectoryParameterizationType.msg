@@ -1,2 +1,0 @@
-string name
-motor_control_msgs/TrajectoryParameterizationType type

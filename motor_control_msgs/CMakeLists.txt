@@ -33,7 +33,6 @@ add_message_files(DIRECTORY msg
                     JointTrajectoryPoint.msg
                     LimbState.msg
                     LimbStates.msg
-                    NamedTrajectoryParameterizationType.msg
                     NullspaceTwistStamped.msg
                     ObjectMass.msg
                     OptionalBool.msg
@@ -53,7 +52,6 @@ add_message_files(DIRECTORY msg
                     SuckerState.msg
                     SuckerStates.msg
                     TorqueData.msg
-                    TrajectoryParameterizationType.msg
                     TwistConstraint.msg
                     TwistFixed.msg
                     TwistLevel.msg

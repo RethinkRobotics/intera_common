@@ -20,10 +20,12 @@ geometry_msgs/Pose poseActual
 geometry_msgs/Pose poseReference
 
 float64[]         forceDesired
-float64[]         torquesImpedance
+float64[]         torquesInteraction
 float64[]         torquesNullSpaceDesired
 float64[]         torquesNullSpaceProjected
 float64[]         quatError
+float64[]         poseError
+float64[]         velError
 float64[]         torquesCollisionAvoidance
 float64[]         endptVelocityActualFiltered
 float64[]         jointPosition

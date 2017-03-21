@@ -28,5 +28,6 @@ float64[]         poseError
 float64[]         velError
 float64[]         torquesCollisionAvoidance
 float64[]         endptVelocityActualFiltered
-float64[]         jointPosition
+float64[]         jointPositionMeasured
+float64[]         jointPositionCommand
 float64           QPoutput

@@ -7,13 +7,13 @@ Intera robots from Rethink Robotics
 Code & Tickets
 --------------
 
-+-----------------+----------------------------------------------------------------+
-| Documentation   | http://sdk.rethinkrobotics.com/intera/                         |
-+-----------------+----------------------------------------------------------------+
-| Issues          | https://github.com/RethinkRobotics/intera_common/issues        |
-+-----------------+----------------------------------------------------------------+
-| Contributions   | http://sdk.rethinkrobotics.com/wiki/Contributions              |
-+-----------------+----------------------------------------------------------------+
++-----------------+-------------------------------------------------------------------------------+
+| Documentation   | http://sdk.rethinkrobotics.com/intera/                                        |
++-----------------+-------------------------------------------------------------------------------+
+| Issues          | https://github.com/RethinkRobotics/intera_common/issues                       |
++-----------------+-------------------------------------------------------------------------------+
+| Contributions   | https://github.com/RethinkRobotics/intera_common/blob/master/CONTRIBUTING.md  |
++-----------------+-------------------------------------------------------------------------------+
 
 intera_common Repository Overview
 ---------------------------------

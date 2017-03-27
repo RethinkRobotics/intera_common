@@ -1,3 +1,10 @@
+5.1.0 (2017-3-27)
+---------------------------------
+- Moved to Apache 2.0 license
+- Added Contribution Guidelines
+- Updates to Inverse Kinematics service to determine if endpoint requested is missing
+- Updates to Forward Kinematics service to determine if requested position is in collision
+
 5.0.4 (2016-12-06)
 ---------------------------------
 - Initial release of intera_common intera_core_msgs intera_tools_description packages

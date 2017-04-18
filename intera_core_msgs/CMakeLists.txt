@@ -45,6 +45,8 @@ add_message_files( DIRECTORY msg
         IOStatus.msg
         IONodeStatus.msg
         URDFConfiguration.msg
+        InteractionControlCommand.msg
+        InteractionControlState.msg
 )
 
 add_service_files( DIRECTORY srv

@@ -12,13 +12,7 @@ string BUSY      = busy
 string UNREADY   = unready
 string ERROR     = error
 #
-string key             # status key
-# The "key" is a descriptive path starting with "io" and ending with
-# the status tag.  It should uniquely identify the status within a
-# device, so it can be used to lookup information such as localized
-# messages and behaviors. Examples:
-#   "io/ready"
-#   "io/modbus_tcp/disconnected/error"
+string id             # message id, for internationalization
 #
-string msg             # optional additional status detail
+string msg            # optional additional status detail
 #

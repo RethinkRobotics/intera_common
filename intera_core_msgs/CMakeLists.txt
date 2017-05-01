@@ -19,6 +19,7 @@ add_message_files( DIRECTORY msg
         HeadState.msg
         AnalogIOStates.msg
         AnalogOutputCommand.msg
+        EndpointNamesArray.msg
         EndpointState.msg
         DigitalIOStates.msg
         HeadPanCommand.msg

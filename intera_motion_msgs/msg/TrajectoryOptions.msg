@@ -33,3 +33,7 @@ string CONSTRAINED_BOUNDARY_CUBIC=CONSTRAINED_BOUNDARY_CUBIC
 string CONSTRAINED_COMPOSITE_CUBIC=CONSTRAINED_COMPOSITE_CUBIC
 string QUINTIC_HERMITE=QUINTIC_HERMITE
 string trajectory_architecture_type
+
+# The rate in seconds that the path is interpolated and returned back to the user
+# No interpolation will happen if set to zero
+float64 path_interpolation_step

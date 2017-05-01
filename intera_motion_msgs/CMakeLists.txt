@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(motion_msgs)
+project(intera_motion_msgs)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs message_generation std_msgs
-                                        geometry_msgs motor_control_msgs intera_core_msgs)
+                                        geometry_msgs intera_core_msgs)
 
 add_message_files(DIRECTORY msg
                   FILES
@@ -13,13 +13,15 @@ add_message_files(DIRECTORY msg
                     TrajectoryAnalysis.msg
                     TrajectoryOptions.msg
                     Waypoint.msg
+                    WaypointSimple.msg
                     WaypointOptions.msg
                     TrackingError.msg
+                    InterpolatedPath.msg
                     )
 
 add_action_files(DIRECTORY action FILES MotionCommand.action)
 
-generate_messages(DEPENDENCIES std_msgs geometry_msgs motor_control_msgs intera_core_msgs actionlib_msgs)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs intera_core_msgs actionlib_msgs)
 
 catkin_package(CATKIN_DEPENDS message_runtime std_msgs
-                              geometry_msgs motor_control_msgs intera_core_msgs actionlib_msgs)
+                              geometry_msgs intera_core_msgs actionlib_msgs)

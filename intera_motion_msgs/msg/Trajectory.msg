@@ -7,7 +7,7 @@ string label
 string[] joint_names
 
 # Array of waypoints that comprise the trajectory
-motion_msgs/Waypoint[] waypoints
+Waypoint[] waypoints
 
 # Trajectory level options
-motion_msgs/TrajectoryOptions trajectory_options
+TrajectoryOptions trajectory_options

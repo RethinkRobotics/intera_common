@@ -22,18 +22,6 @@ TrackingOptions tracking_options
 # Desired trajectory end time, ROS timestamp
 time end_time
 
-# Low-level trajectory architechture (optional, leave blank to use default values)
-# See KinematicTrajectory::KinematicTrajectoryArchitecture
-string DEFAULT=DEFAULT
-string CUBIC_HERMITE=CUBIC_HERMITE
-string CLAMPED_CUBIC=CLAMPED_CUBIC
-string CLAMPED_BOUNDARY_CUBIC=CLAMPED_BOUNDARY_CUBIC
-string CONSTRAINED_CLAMPED_CUBIC=CONSTRAINED_CLAMPED_CUBIC
-string CONSTRAINED_BOUNDARY_CUBIC=CONSTRAINED_BOUNDARY_CUBIC
-string CONSTRAINED_COMPOSITE_CUBIC=CONSTRAINED_COMPOSITE_CUBIC
-string QUINTIC_HERMITE=QUINTIC_HERMITE
-string trajectory_architecture_type
-
 # The rate in seconds that the path is interpolated and returned back to the user
 # No interpolation will happen if set to zero
 float64 path_interpolation_step

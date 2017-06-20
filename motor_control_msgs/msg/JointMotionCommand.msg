@@ -5,9 +5,15 @@ motor_control_msgs/JointPosition target
 float64[] velocities
 float64[] accelerations
 
-# Speed ratio (1.0 is max speed)
+# if is_trajectory: speed ratio == time rate of the trajectory segment
+# else: speed ratio of 1.0 corresponds to max speed at each joint
 float64 speed_ratio
 
-# set to true if this is a point on a trajectory and should just be passed
-# directly to the motor controller.  speed ratio will be ignored.
+# set to True if this command is part of a trajectory
 bool is_trajectory
+
+# a unique number that is assigned to each distinct trajectory
+uint32 trajectory_id
+
+# Time since the trajectory started, in seconds. Only used if is_trajectory
+float64 trajectory_time

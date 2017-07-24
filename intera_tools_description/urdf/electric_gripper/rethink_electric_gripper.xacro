@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rethink_electric_gripper">
-  <xacro:macro name="rethink_electric_gripper" params="side r_finger r_finger_slot r_finger_tip r_finger_grasp l_finger l_finger_slot l_finger_tip l_finger_grasp use_connector_plate">
+  <xacro:macro name="rethink_electric_gripper" params="side r_finger r_finger_slot r_finger_tip r_finger_grasp l_finger l_finger_slot l_finger_tip l_finger_grasp use_connector_plate gazebo">
     <xacro:property name="gripper_side" value="${side[0]}" scope="local"/>
 
     <!-- Base of end effector -->
@@ -50,7 +50,7 @@
      </joint>
      <!-- Connector Plate Link -->
      <xacro:include filename="$(find intera_tools_description)/urdf/connector_plate/connector_plate.xacro" />
-     <xacro:rethink_connector_plate side="${side}"/>
+     <xacro:rethink_connector_plate side="${side}" gazebo="${gazebo}"/>
      <xacro:property name="electric_gripper_parent_link" value="${side}_connector_plate_mount" scope="local"/>
      <xacro:property name="connector_plate_length" value="${rethink_connector_plate_length}" scope="local"/>
    </xacro:if>
@@ -121,23 +121,24 @@
       <dynamics damping="0.7" friction="0.0"/>
     </joint>
 
+    <xacro:if value="${gazebo}">
     <transmission name="gripper_${side}1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${gripper_side}_gripper_r_finger_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="gripper_${gripper_side}1_motor1">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
     <transmission name="gripper_${side}2">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${gripper_side}_gripper_l_finger_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="gripper_${gripper_side}1_motor2">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -147,6 +148,7 @@
     <gazebo reference="${gripper_side}_gripper_l_finger_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
+    </xacro:if>
 
   </xacro:macro>
 </robot>

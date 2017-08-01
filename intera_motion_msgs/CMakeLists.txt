@@ -7,16 +7,17 @@ find_package(catkin REQUIRED COMPONENTS actionlib_msgs message_generation std_ms
 
 add_message_files(DIRECTORY msg
                   FILES
+                    EndpointTrackingError.msg
+                    InterpolatedPath.msg
+                    JointTrackingError.msg
                     MotionStatus.msg
                     TrackingOptions.msg
                     Trajectory.msg
                     TrajectoryAnalysis.msg
                     TrajectoryOptions.msg
                     Waypoint.msg
-                    WaypointSimple.msg
                     WaypointOptions.msg
-                    TrackingError.msg
-                    InterpolatedPath.msg
+                    WaypointSimple.msg
                     )
 
 add_action_files(DIRECTORY action FILES MotionCommand.action)

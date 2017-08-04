@@ -14,5 +14,5 @@ string ERROR     = error
 #
 string id             # message id, for internationalization
 #
-string msg            # optional additional status detail
+string detail         # optional additional status detail
 #

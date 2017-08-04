@@ -18,6 +18,7 @@ add_message_files( DIRECTORY msg
         NavigatorStates.msg
         HeadState.msg
         AnalogIOStates.msg
+        CameraControl.msg
         AnalogOutputCommand.msg
         EndpointNamesArray.msg
         EndpointState.msg
@@ -26,6 +27,7 @@ add_message_files( DIRECTORY msg
         AnalogIOState.msg
         DigitalOutputCommand.msg
         AssemblyStates.msg
+        CameraSettings.msg
         AssemblyState.msg
         NavigatorState.msg
         JointCommand.msg

@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rethink_electric_gripper">
   <xacro:macro name="rethink_electric_gripper" params="side r_finger r_finger_slot r_finger_tip r_finger_grasp l_finger l_finger_slot l_finger_tip l_finger_grasp use_connector_plate gazebo">
-    <xacro:property name="gripper_side" value="${side[0]}" scope="local"/>
+    <xacro:property name="gripper_side" value="${side}" scope="local"/>
 
-    <!-- Base of end effector -->
+    <!-- Base of whole end effector - (Connector Plate + Electric Gripper + Fingers + Tips) -->
     <link name="${side}_gripper_base">
       <inertial>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <mass value="0.0001"/>
-        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.0"/>
+        <!-- Sum Gripper Mass - for whole end effector, measured from end of plastic cuff -->
+        <mass value="0.44"/>
+        <origin rpy="0 0 0" xyz="0.0028 -0.0004 0.0322"/>
+        <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
       </inertial>
     </link>
 
@@ -31,9 +32,8 @@
       </collision>
       <inertial>
         <origin rpy="${-pi/2} ${pi} 0" xyz="0.0 0.0 0.0"/>
-        <!-- gripper_base mass -->
-        <mass value="0.3"/>
-        <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+        <mass value="0.0"/>
+        <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
       </inertial>
     </link>
 
@@ -43,8 +43,8 @@
    </xacro:unless>
    <xacro:if value="${use_connector_plate}">
      <!-- Connector Plate Joint -->
-     <joint name="${side}_connector_plate_joint" type="fixed">
-       <origin xyz="0 0 -0.0032" rpy="0 0 0" />
+     <joint name="${side}_connector_plate_base_joint" type="fixed">
+       <origin xyz="0 0 0.0018" rpy="0 0 0" />
        <parent link="${side}_gripper_base"  />
        <child  link="${side}_connector_plate_base" />
      </joint>
@@ -54,8 +54,9 @@
      <xacro:property name="electric_gripper_parent_link" value="${side}_connector_plate_mount" scope="local"/>
      <xacro:property name="connector_plate_length" value="${rethink_connector_plate_length}" scope="local"/>
    </xacro:if>
+
    <!-- Electric Gripper Base joint -->
-    <joint name="${side}_electric_gripper_base_jnt" type="fixed">
+    <joint name="${side}_electric_gripper_base_joint" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <parent link="${electric_gripper_parent_link}"/>
       <child link="${side}_electric_gripper_base"/>
@@ -64,38 +65,54 @@
     <!-- Left finger link -->
     <xacro:property name="finger_length" value="0.0" scope="global"/>
     <xacro:include filename="$(find intera_tools_description)/urdf/electric_gripper/fingers/${l_finger}.xacro" />
-    <xacro:finger_xacro gripper_side="${gripper_side}" finger_side="l" reflect="1" finger_tip="${l_finger_tip}" finger_grasp="${l_finger_grasp}"/>
+    <xacro:finger_xacro gripper_side="${gripper_side}" finger_side="l" reflect="1" finger_tip="${l_finger_tip}" finger_grasp="${l_finger_grasp}" gazebo="${gazebo}"/>
     <xacro:property name="tip_finger_length" value="${finger_length}" scope="local"/>
 
     <!-- Right finger link -->
     <xacro:include filename="$(find intera_tools_description)/urdf/electric_gripper/fingers/${r_finger}.xacro" />
-    <xacro:finger_xacro gripper_side="${gripper_side}" finger_side="r" reflect="-1" finger_tip="${r_finger_tip}" finger_grasp="${r_finger_grasp}"/>
+    <xacro:finger_xacro gripper_side="${gripper_side}" finger_side="r" reflect="-1" finger_tip="${r_finger_tip}" finger_grasp="${r_finger_grasp}" gazebo="${gazebo}"/>
     <xacro:if value="${finger_length > tip_finger_length}">
         <xacro:property name="tip_finger_length" value="${finger_length}" scope="local"/>
     </xacro:if>
 
     <!-- Gripper Base Joint -->
-    <joint name="${side}_gripper_base" type="fixed">
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+    <xacro:property name="end_of_arm_offset" value="-0.005" scope="local"/>
+    <joint name="${side}_gripper_base_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 ${end_of_arm_offset}"/>
       <parent link="${side}_hand"/>
       <child link="${side}_gripper_base"/>
     </joint>
 
     <!-- Gripper Tip joint -->
-   <xacro:property name="electric_gripper_base_length" value="0.04552" scope="local"/>
-    <joint name="${side}_endpoint" type="fixed">
-      <origin rpy="0 0 0" xyz="0 0 ${connector_plate_length+electric_gripper_base_length+tip_finger_length}"/>
+    <xacro:property name="electric_gripper_base_length" value="0.04552" scope="local"/>
+    <joint name="${side}_gripper_tip_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 ${(-1*end_of_arm_offset)+connector_plate_length+electric_gripper_base_length+tip_finger_length}"/>
       <parent link="${side}_gripper_base"/>
-      <child link="${side}_gripper"/>
+      <child link="${side}_gripper_tip"/>
     </joint>
 
     <!-- Electric Gripper Tip link -->
-    <link name="${side}_gripper">
+    <link name="${side}_gripper_tip">
       <inertial>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <mass value="0.0001"/>
         <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.0"/>
       </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.015 0.015 0.015"/>
+        </geometry>
+        <material name="darkgrey">
+          <color rgba="0.2 0.3 0.3 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- Left finger -->

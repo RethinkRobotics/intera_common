@@ -32,8 +32,8 @@
       </collision>
       <inertial>
         <origin rpy="${-pi/2} ${pi} 0" xyz="0.0 0.0 0.0"/>
-        <mass value="0.0"/>
-        <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+        <mass value="2e-06"/>
+        <inertia ixx="1.1e-09" ixy="0" ixz="0" iyy="1.1e-09" iyz="0" izz="1.1e-09"/>
       </inertial>
     </link>
 
@@ -94,25 +94,10 @@
     <!-- Electric Gripper Tip link -->
     <link name="${side}_gripper_tip">
       <inertial>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <mass value="0.0001"/>
-        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2e-06"/>
+        <inertia ixx="1.1e-09" ixy="0" ixz="0" iyy="1.1e-09" iyz="0" izz="1.1e-09"/>
       </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <box size="0.015 0.015 0.015"/>
-        </geometry>
-        <material name="darkgrey">
-          <color rgba="0.2 0.3 0.3 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <box size="0.01 0.01 0.01"/>
-        </geometry>
-      </collision>
     </link>
 
     <!-- Left finger -->

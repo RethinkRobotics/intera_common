@@ -18,3 +18,5 @@ float64[] endpoint_force_command
 
 string endpoint_name
 bool in_endpoint_frame
+bool disable_damping_in_force_control
+bool disable_reference_resetting

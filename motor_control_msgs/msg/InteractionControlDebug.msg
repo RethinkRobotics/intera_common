@@ -7,6 +7,7 @@ uint8[]   interactionControlMode
 float64[] K_Impedance
 float64[] D_Impedance
 float64[] K_NullSpace
+bool[] max_Impedance
 
 ## Force Control Parameters
 # Vector of desired forces to be regulated in (N) and (Nm)
@@ -31,6 +32,12 @@ float64[]         endptVelocityActualFiltered
 float64[]         jointPositionMeasured
 float64[]         jointPositionCommand
 float64           QPoutput
-
 bool              disableDampingInForceControl
 bool              disableReferenceResetting
+
+## Rotational Stiffness Behavior Related Parameters
+bool disableRotationalStiffnessField
+float64[]         quatReferenceStitch
+float64[]         quatErrorDelta
+float64[]         quatErrorVecSum
+float64[]         quatErrorVecTotal

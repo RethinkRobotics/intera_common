@@ -27,6 +27,17 @@ string endpoint_name
 # True if impedance and force commands are defined in endpoint frame
 bool in_endpoint_frame
 
+# Set to true to disable damping during force control. Damping is used
+# to slow down robot motion during force control in free space.
+# Option included for SDK users to disable damping in force control
+bool disable_damping_in_force_control
+
+# Set to true to disable reference resetting. Reference resetting is
+# used when interaction parameters change, in order to avoid jumps/jerks.
+# Option included for SDK users to disable reference resetting if the
+# intention is to change interaction parameters.
+bool disable_reference_resetting
+
 ## Mode Selection Parameters
 # The possible interaction control modes are:
 # Impedance mode: implements desired endpoint stiffness and damping.

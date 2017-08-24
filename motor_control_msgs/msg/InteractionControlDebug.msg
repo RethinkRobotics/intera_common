@@ -31,3 +31,6 @@ float64[]         endptVelocityActualFiltered
 float64[]         jointPositionMeasured
 float64[]         jointPositionCommand
 float64           QPoutput
+
+bool              disableDampingInForceControl
+bool              disableReferenceResetting

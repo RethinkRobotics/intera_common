@@ -20,3 +20,7 @@ string endpoint_name
 bool in_endpoint_frame
 bool disable_damping_in_force_control
 bool disable_reference_resetting
+
+## Parameters for Constrained Zero-G Behaviors
+# Please refer to InteractionControlCommand.msg for more details
+bool rotations_for_constrained_zeroG

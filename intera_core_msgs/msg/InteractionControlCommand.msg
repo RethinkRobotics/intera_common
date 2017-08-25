@@ -59,8 +59,9 @@ uint8[] interaction_control_mode
 # the corresponding parameters will be ignored.
 
 ## Parameters for Constrained Zero-G Behaviors
-# Allow arbitrary rotational displacements from the current orientation for constrained zero-G
-# by setting rotations_for_constrained_zeroG = true. Doing this will disable the rotational
-# stiffness field which limits rotational displacements to +/- 82.5 degree.
-# NOTE: it can be used only with a stationary reference orientation
+# Allow for arbitrary rotational displacements from the current orientation
+# for constrained zero-G. Setting 'rotations_for_constrained_zeroG = True'
+# will disable the rotational stiffness field which limits rotational
+# displacements to +/- 82.5 degree.
+# NOTE: it will be only enabled for a stationary reference orientation
 bool rotations_for_constrained_zeroG

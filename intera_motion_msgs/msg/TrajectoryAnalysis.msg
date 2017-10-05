@@ -18,3 +18,15 @@ float64[] peak_accel_command
 
 # Peak jerk command = max(abs(reference jerk)) for each joint
 float64[] peak_jerk_command
+
+# Minimum trajectory time rate observed
+float64 min_time_rate
+
+# Maximium trajectory time rate observed
+float64 max_time_rate
+
+# Max joint position error = max(abs(position error)) for each joint
+float64[] max_position_error
+
+# Max joint velocity error = max(abs(velocity error)) for each joint
+float64[] max_velocity_error

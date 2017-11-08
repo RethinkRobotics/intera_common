@@ -108,7 +108,7 @@
       <parent link="${side}_electric_gripper_base"/>
       <child link="${gripper_side}_gripper_l_finger"/>
       <limit effort="20.0" lower="0.0" upper="0.020833" velocity="5.0"/>
-      <dynamics damping="1000.0" friction="5000.0"/>
+      <dynamics damping="100.0" friction="500.0"/>
     </joint>
 
     <!-- Right finger -->
@@ -120,7 +120,7 @@
       <child link="${gripper_side}_gripper_r_finger"/>
       <limit effort="20.0" lower="-0.020833" upper="0.0" velocity="5.0"/>
       <mimic joint="${gripper_side}_gripper_l_finger_joint" multiplier="-1.0"/>
-      <dynamics damping="1000.0" friction="5000.0"/>
+      <dynamics damping="100.0" friction="500.0"/>
     </joint>
 
     <xacro:if value="${gazebo}">

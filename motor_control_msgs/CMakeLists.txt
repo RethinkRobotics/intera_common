@@ -49,8 +49,6 @@ add_message_files(DIRECTORY msg
                     Stiffness.msg
                     StiffnessConstraint.msg
                     StringArray.msg
-                    SuckerState.msg
-                    SuckerStates.msg
                     TaskState.msg
                     TorqueData.msg
                     TwistConstraint.msg

@@ -51,6 +51,7 @@ add_message_files(DIRECTORY msg
                     StringArray.msg
                     SuckerState.msg
                     SuckerStates.msg
+                    TaskState.msg
                     TorqueData.msg
                     TwistConstraint.msg
                     TwistFixed.msg

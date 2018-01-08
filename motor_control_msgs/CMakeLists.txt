@@ -14,6 +14,7 @@ add_message_files(DIRECTORY msg
                     ApproachMapMsg.msg
                     AccelerometerStates.msg
                     ArmStateEstimate.msg
+                    CameraStrobe.msg
                     CollisionDetection.msg
                     Constraint.msg
                     DebugJointCommand.msg

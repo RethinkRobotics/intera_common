@@ -47,6 +47,7 @@ add_message_files(DIRECTORY msg
                     SpeedLimit.msg
                     SpeedLimitScale.msg
                     SplineProfileParameters.msg
+                    StateManagerData.msg
                     Stiffness.msg
                     StiffnessConstraint.msg
                     StringArray.msg

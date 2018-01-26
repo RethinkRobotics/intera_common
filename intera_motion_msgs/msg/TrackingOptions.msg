@@ -6,13 +6,9 @@ float64  min_time_rate
 bool     use_max_time_rate
 float64  max_time_rate
 
-# How quickly to change the tracking time rate
-bool     use_time_rate_accel
-float64  time_rate_accel
-
-# How close (in rad) each joint should be to the final goal
+# Angular error tolerance at final point on trajectory (rad)
 float64[] goal_joint_tolerance
 
-# Settling time after reaching the end of the trajectory
-bool     use_goal_time_tolerance
-float64  goal_time_tolerance
+# Time for the controller to settle within joint tolerances at the goal (sec)
+bool     use_settling_time_at_goal
+float64  settling_time_at_goal

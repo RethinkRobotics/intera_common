@@ -10,7 +10,7 @@ float64[] K_NullSpace
 bool[] max_Impedance
 
 ## Force Control Parameters
-# Vector of desired forces to be regulated in (N) and (Nm)
+# Vector of user-specified force commands in (N) and (Nm)
 float64[] forceCommand
 # Vector of flags indicating whether motion bounds are reached during force control {false,true}
 bool[]    poseLimitReached
@@ -28,6 +28,7 @@ float64[]         quatError
 float64[]         poseError
 float64[]         velError
 float64[]         torquesCollisionAvoidance
+float64[]         endptVelocityActual
 float64[]         endptVelocityActualFiltered
 float64[]         jointPositionMeasured
 float64[]         jointPositionCommand
@@ -41,3 +42,8 @@ float64[]         quatReferenceStitch
 float64[]         quatErrorDelta
 float64[]         quatErrorVecSum
 float64[]         quatErrorVecTotal
+
+## Parameters used for Arbitrary TCP Frames
+float64           tipLength
+string            endpointName
+float64           betaEMAFilter

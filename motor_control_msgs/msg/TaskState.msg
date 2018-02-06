@@ -1,2 +1,4 @@
-# true when executing a task
 bool running
+bool paused
+bool valid
+bool error

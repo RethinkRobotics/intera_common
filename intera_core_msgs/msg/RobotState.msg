@@ -1,8 +1,12 @@
+bool homed               # true if all joints are homed
 bool ready               # true if enabled and ready to operate, e.g., not homing
 bool enabled             # true if enabled
 bool stopped             # true if stopped -- e-stop asserted
 bool error               # true if a component of the assembly has an error
 bool lowVoltage          # true when the robot is in low voltage mode
+
+std_msgs/Duration customer_uptime
+std_msgs/Duration customer_task_time
 #
 # The following are specific to the robot top-level assembly:
 uint8  estop_button      # One of the following:
@@ -16,4 +20,4 @@ uint8  estop_source      # If stopped is true, the source of the e-stop.  One of
   uint8  ESTOP_SOURCE_USER      = 1   # e-stop source is user input (the red button)
   uint8  ESTOP_SOURCE_UNKNOWN   = 2   # e-stop source is unknown
   uint8  ESTOP_SOURCE_FAULT     = 3   # MotorController asserted e-stop in response to a joint fault
-  uint8  ESTOP_SOURCE_BRAIN     = 4   # MotorController asserted e-stop in response to a lapse of the brain heartbeat
+  uint8  ESTOP_SOURCE_ENGINE    = 4   # MotorController asserted e-stop in response to engine request

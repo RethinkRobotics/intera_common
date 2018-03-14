@@ -18,13 +18,16 @@ add_message_files( DIRECTORY msg
         NavigatorStates.msg
         HeadState.msg
         AnalogIOStates.msg
+        CameraControl.msg
         AnalogOutputCommand.msg
+        EndpointNamesArray.msg
         EndpointState.msg
         DigitalIOStates.msg
         HeadPanCommand.msg
         AnalogIOState.msg
         DigitalOutputCommand.msg
         AssemblyStates.msg
+        CameraSettings.msg
         AssemblyState.msg
         NavigatorState.msg
         JointCommand.msg
@@ -45,6 +48,8 @@ add_message_files( DIRECTORY msg
         IOStatus.msg
         IONodeStatus.msg
         URDFConfiguration.msg
+        InteractionControlCommand.msg
+        InteractionControlState.msg
 )
 
 add_service_files( DIRECTORY srv

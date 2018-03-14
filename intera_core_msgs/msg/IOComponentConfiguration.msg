@@ -1,4 +1,3 @@
 ## IO Component configuration data
-string name                  # device name
-string config                # device-specific JSON configuration data
-
+string name                           # component name
+string config                         # component configuration JSON

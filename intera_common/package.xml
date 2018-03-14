@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>intera_common</name>
-  <version>5.1.0</version>
+  <version>5.2.0</version>
   <description>
     Common metapackage for Intera messages, and end effector URDF's
     and meshes for the Intera robots from Rethink Robotics.
@@ -24,6 +24,7 @@
 
   <run_depend>intera_core_msgs</run_depend>
   <run_depend>intera_tools_description</run_depend>
+  <run_depend>intera_motion_msgs</run_depend>
 
   <export>
     <metapackage/>

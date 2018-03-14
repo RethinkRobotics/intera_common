@@ -20,7 +20,7 @@
       </collision>
       <inertial>
         <origin rpy="0 0 ${pi*(g_reflect+1)/2}" xyz="0 0 0"/>
-        <mass value="0.01"/>
+        <mass value="0.001"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
       </inertial>
     </link>

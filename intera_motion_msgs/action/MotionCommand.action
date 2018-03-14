@@ -1,0 +1,20 @@
+# Engine command goal
+string command
+string MOTION_START=start
+string MOTION_STOP=stop
+string MOTION_GENERATE=generate  # Generate path, but do not run
+Trajectory trajectory
+
+---
+# result
+bool result
+string errorId
+TrajectoryAnalysis trajectory_analysis
+
+int32 last_successful_waypoint
+int32 HAVE_NOT_REACHED_FIRST_WAYPOINT=-1
+int32 GENERAL_TRAJECTORY_FAILURE=-2
+
+---
+# feedback
+MotionStatus status

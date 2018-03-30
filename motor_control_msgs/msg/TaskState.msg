@@ -1,4 +1,4 @@
 bool running
 bool paused
-bool valid
 bool error
+std_msgs/Duration customer_task_time

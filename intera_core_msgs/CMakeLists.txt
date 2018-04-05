@@ -15,8 +15,7 @@ add_message_files( DIRECTORY msg
         AnalogIOState.msg
         AnalogIOStates.msg
         AnalogOutputCommand.msg
-        AssemblyState.msg
-        AssemblyStates.msg
+        RobotAssemblyState.msg
         CameraControl.msg
         CameraSettings.msg
         CollisionAvoidanceState.msg

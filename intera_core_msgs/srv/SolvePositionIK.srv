@@ -6,6 +6,16 @@ geometry_msgs/PoseStamped[] pose_stamp
 # * empty arrays or a non-default seed_mode will cause user seed to not be used
 sensor_msgs/JointState[] seed_angles
 
+# (optional) Index to seed from. If greater than -1 and seed_mode is SEED_AUTO or
+# SEED_USER, this index can specify which result you would like to seed IK from.
+# eg.
+# Pose0 IK is solved with supplied seed_angles
+# Pose1 IK is solved with the seed as the solution of IK at Pose0
+# Pose2 IK is solved with the seed as the solution of IK at Pose1
+# and your seedIndex array would look like:
+# [ -1, 0, 1]
+int16[] user_seed_indices
+
 # Seed Type Mode
 # * default (SEED_AUTO) mode: iterate through seed types until first valid
 #                             solution is found

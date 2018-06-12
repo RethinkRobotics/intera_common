@@ -50,6 +50,7 @@ add_message_files( DIRECTORY msg
         URDFConfiguration.msg
         InteractionControlCommand.msg
         InteractionControlState.msg
+        TaskState.msg
 )
 
 add_service_files( DIRECTORY srv

@@ -17,6 +17,7 @@ float64[] commandJointAngles     #final velocity, integrated ready to send to JC
 float64[] commandJointVelocities #final velocity after all capping (ns + coll avoid + cmd, then capped)
 float64[] commandJointTorques    #final efforts after capping to be sent JCBs, exclusive of torque_bias
 float64[] commandTorqueBiases      #torque biases to send to JCBs as reference torque
+uint32[] commandJointAlphas      #joint position control torque activation (0-100)
 
 #Internal States
 float64[] nullspaceSetpoint               #Joint angles used to calculate nullspace velocity

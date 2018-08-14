@@ -5,9 +5,6 @@ bool stopped             # true if stopped -- e-stop asserted
 bool error               # true if a component of the assembly has an error
 bool lowVoltage          # true when the robot is in low voltage mode
 
-std_msgs/Duration customer_uptime
-std_msgs/Duration customer_task_time
-#
 # The following are specific to the robot top-level assembly:
 uint8  estop_button      # One of the following:
   uint8   ESTOP_BUTTON_UNPRESSED = 0   # Robot is not stopped and button is not pressed

@@ -1,3 +1,18 @@
+5.3.0 (2018-8-14)
+---------------------------------
+- Renamed AssemblyState.msg to RobotAssemblyState.msg
+- Added error strings to MotionCommand.action
+- Made TackingOptions.msg fields more readable
+
+5.2.0 (2018-4-16)
+---------------------------------
+- Added interaction control and state messages
+- Added camera settings and control messages
+- Added endpoint names array messages
+- Modified IO configuration messages
+- Added intera_motion_msgs package for motion_interface
+- Modified eletrical gripper xacro for gazebo
+
 5.1.0 (2017-3-27)
 ---------------------------------
 - Moved to Apache 2.0 license

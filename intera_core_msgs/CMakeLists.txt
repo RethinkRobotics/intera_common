@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 
 project(intera_core_msgs)
 
@@ -56,7 +56,10 @@ add_service_files( DIRECTORY srv
         SolvePositionIK.srv
 )
 
-add_action_files(DIRECTORY action FILES CalibrationCommand.action)
+add_action_files(DIRECTORY action
+        FILES
+        CalibrationCommand.action
+)
 
 ## Build
 generate_messages(DEPENDENCIES std_msgs geometry_msgs sensor_msgs actionlib_msgs)

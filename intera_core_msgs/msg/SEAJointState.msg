@@ -41,3 +41,5 @@ float64[] interaction_torque
 float64[] hysteresis_model_effort
 float64[] crosstalk_model_effort
 float64   hystState
+float64[] collision_avoidance_torque
+float64[] actual_current

@@ -15,7 +15,6 @@ add_message_files( DIRECTORY msg
         AnalogIOState.msg
         AnalogIOStates.msg
         AnalogOutputCommand.msg
-        RobotAssemblyState.msg
         CameraControl.msg
         CameraSettings.msg
         CollisionAvoidanceState.msg
@@ -45,6 +44,7 @@ add_message_files( DIRECTORY msg
         JointLimits.msg
         NavigatorState.msg
         NavigatorStates.msg
+        RobotAssemblyState.msg
         SEAJointState.msg
         URDFConfiguration.msg
 )

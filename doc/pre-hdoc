@@ -1,3 +1,0 @@
-#!/bin/bash
-
-hdoc-rosmsg-to-doxycpp ../ ../msg/msg_gen

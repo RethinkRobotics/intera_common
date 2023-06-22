@@ -1,4 +1,0 @@
-MotorControlMsgs documentation  {#mainpage}
-==============================
-
-TODO

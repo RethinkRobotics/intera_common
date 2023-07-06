@@ -4,9 +4,6 @@ project(motor_control_msgs)
 
 find_package(catkin REQUIRED COMPONENTS message_generation std_msgs geometry_msgs sensor_msgs)
 
-find_package(rethink_build_support REQUIRED)
-rethink_configure()
-
 add_message_files(DIRECTORY msg
                   FILES
                   AccelerometerStates.msg
